@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "My React Extension",
+  "version": "1.0",
+  "description": "A React-powered browser extension",
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
